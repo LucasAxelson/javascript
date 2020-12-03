@@ -1,9 +1,67 @@
+function pressed() {
+    document.getElementById("thankyou").innerHTML = "Thank you";
+
+    //console.log(document.getElementById("thankyou"));
+    //alert("Thank you for clicking")
+}
+
+function redirecionar() {
+    window.open("https://siga.cps.sp.gov.br/aluno/login.aspx")
+    window.location.href = "https://siga.cps.sp.gov.br/aluno/login.aspx";
+}
+
+function trocar(element) {
+    element.innerHTML = "Thank you!"
+}
+
+function voltar(element) {
+    element.innerHTML = "Pass the mouse here!"
+}
+
+
+function trocar1() {
+    document.getElementById("seeyou").innerHTML = "Thank you for passing by!";
+    //    alert("Works!")
+}
+
+function voltar1() {
+    document.getElementById("seeyou").innerHTML = "Pass your mouse here!";
+}
+
+function load() {
+    alert("Page loaded.");
+}
+
+function functchange(element) {
+    console.log(element.value)
+}
+
+/*
+function validaidade(idade) {
+    var validar;
+    if (idade >= 18) {
+        validar = true
+    }
+    else {
+        validar = false
+    }
+    return validar;
+}
+
+var idade = prompt("Qual a sua idade?");
+
+console.log(validaidade(idade));
+
+var d = new Date();
+alert(d.get());
+alert(d.getMonth());
+alert(d.getFullYear());
+
 var count;
 for (count = 1; count <= 5; count++) {
     alert(count);
 };
 
-/*
 var count = 0;
 while (count < 5) {
     console.log(count);
