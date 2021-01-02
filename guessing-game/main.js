@@ -24,5 +24,5 @@ if (guess === 'q') {
     alert("Ok. You Quit!")
 }
 else {
-    alert(`You got it! It took you ${attempts} guessses`)
+    alert(`You got it! It took you ${attempts} guesses`)
 }
