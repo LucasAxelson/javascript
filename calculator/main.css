@@ -1,6 +1,95 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0; 
+}
+
+body { 
+    background-color: rgb(242, 242, 242);
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+
+    transform: translate(-50%, -50%);
+    position: absolute;    
+    top: 50%;
+    left: 50%;
+
+    padding-bottom: 1.5rem;
+    width: 500px;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 4rem;
+    padding: 3rem 1.5rem;
+
+    background-color: rgb(43, 43, 43);
+    font-size: 60px;    
+    color: white;
+    text-align: right;
+    font-weight: 400;
+}
+
+.calculator-keys {
+    margin: 1.5rem ;;
+}
+
+.calculator-keys button {
+    margin: .75rem;
+    width: 5.25rem;
+    height: 4rem;
+ 
+    font-weight: 400;
+    font-size: 2rem;
+    color: #333;
+
+    border: 1px rgb(172, 172, 172) solid;
+    outline: none;
+    border-radius: 2px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, .04));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .05), inset 0 1px 0 0 rgba(255, 255, 255, .45), inset 0 -1px 0 0 rgba(255, 255, 255, .15), 0 1px 0 0 rgba(255, 255, 255, .15);
+    text-shadow: 0 1px rgba(255, 255, 255, .4);
+  }
+
+.calculator-keys button:hover {
+    background-color: rgb(220, 220, 220);
+    transition: .1s ease-in;
+}
+
+.calculator-keys .equals button {
+    color: white;
+    background-color: rgb(63, 120, 243);
+    height: 20.5rem;
+}
+
+.calculator-keys .equals button:hover {
+    background-color: rgb(37, 102, 243);
+}
+
+.calculator-keys .all-clear {
+    background-color: #f0595f;
+    border-color: #b0353a;
+    color: #fff;
+}
+  
+.calculator-keys .all-clear:hover {
+    background-color: #f17377;
+}
+
+.calculator-keys .right {
+    float: right;
+}
+
+.calculator-keys .left {
+    float: left;
+}
+
+.calculator-keys .operator {
+    color: rgb(63, 120, 243);;
 }
 
