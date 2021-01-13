@@ -61,13 +61,13 @@ body {
     transition: .1s ease-in;
 }
 
-.calculator-keys .equals button {
+.calculator-keys .equal-sign {
     color: white;
     background-color: rgb(63, 120, 243);
     height: 20.5rem;
 }
 
-.calculator-keys .equals button:hover {
+.calculator-keys .equal-sign:hover {
     background-color: rgb(37, 102, 243);
 }
 
@@ -89,7 +89,7 @@ body {
     float: left;
 }
 
-.calculator-keys .operator {
+.calculator-keys .blue {
     color: rgb(63, 120, 243);;
 }
 
