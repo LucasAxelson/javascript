@@ -1,15 +1,12 @@
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-const spans = document.querySelectorAll('h1 span');
 
-for (let span of spans) {
-    span = span.textContent;
-    console.log(span);
-}
 
-for (let color of colors) {
-    console.log(color);
-}
+// const lists = document.querySelectorAll('li');
+
+// for (let list of lists) {
+//     list.classList.toggle('highlight');
+// }
 
 // container.style.textAlign = 'center';
 
