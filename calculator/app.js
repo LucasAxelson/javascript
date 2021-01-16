@@ -1,3 +1,5 @@
+// < !--Project inspired by https://freshman.tech/calculator/ - 13/01/2021 -->
+
 const calculator = {
     displayValue: '0',
     firstOperand: null,
@@ -19,6 +21,11 @@ function inputDigit(digit) {
 }
 
 function inputDecimal(dot) {
+    if (calculator.waitingForSecondOperand === true) {
+        calculator.displayValue = '0.'
+        calculator.waitingForSecondOperand = false;
+        return
+    }
     if (!calculator.displayValue.includes(dot)) {
         calculator.displayValue += dot;
     }
@@ -36,11 +43,10 @@ function handleOperator(nextOperator) {
 
     if (firstOperand == null && !isNaN(inputValue)) {
         calculator.firstOperand = inputValue;
-
     } else if (operator) {
         const result = calculate(firstOperand, inputValue, operator);
 
-        calculator.displayValue = String(result);
+        calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
         calculator.firstOperand = result;
     }
 
@@ -63,6 +69,14 @@ function calculate(firstOperand, secondOperand, operator) {
     return secondOperand;
 }
 
+function resetCalculator() {
+    calculator.displayValue = '0';
+    calculator.firstOperand = null;
+    calculator.waitingForSecondOperand = false;
+    calculator.operator = null;
+    console.log(calculator);
+}
+
 function updateDisplay() {
     const display = document.querySelector('.calculator-screen');
     display.value = calculator.displayValue;
@@ -71,29 +85,33 @@ function updateDisplay() {
 updateDisplay();
 
 const keys = document.querySelector('.calculator-keys');
-keys.addEventListener('click', (event) => {
+keys.addEventListener('click', event => {
     const { target } = event;
+    const { value } = target;
     if (!target.matches('button')) {
         return;
     }
 
-    if (target.classList.contains('operator')) {
-        handleOperator(target.value);
-        updateDisplay();
-        return;
+    switch (value) {
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+        case '=':
+            handleOperator(value);
+            break;
+        case '.':
+            inputDecimal(value);
+            break;
+        case 'all-clear':
+            resetCalculator();
+            break;
+        default:
+            // check if the key is an integer
+            if (Number.isInteger(parseFloat(value))) {
+                inputDigit(value);
+            }
     }
 
-    if (target.classList.contains('decimal')) {
-        inputDecimal(target.value);
-        updateDisplay();
-        return;
-    }
-
-    if (target.classList.contains('all-clear')) {
-        console.log('clear', target.value);
-        return;
-    }
-
-    inputDigit(target.value);
     updateDisplay();
 });
