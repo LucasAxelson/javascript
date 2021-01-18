@@ -1,10 +1,11 @@
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
+const words = document.querySelectorAll('span');
 
+for (let i = 0; i < 7; i++) {
+    words[i].style.color = colors[i];
+}
 
-// const lists = document.querySelectorAll('li');
-
-// for (let list of lists) {
 //     list.classList.toggle('highlight');
 // }
 
