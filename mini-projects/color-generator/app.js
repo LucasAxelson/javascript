@@ -13,10 +13,10 @@ const randomColor = () => {
     const b = Math.floor(Math.random() * 255);
 
     const rgbSum = r + g + b;
-    if (rgbSum < 160) {
-        h1.style.color = 'white';
-    } else {
+    if (rgbSum > 600) {
         h1.style.color = 'black';
+    } else {
+        h1.style.color = 'white';
     };
 
     return `rgb(${r}, ${g}, ${b})`;
