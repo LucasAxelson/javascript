@@ -13,29 +13,39 @@ let isGameOver = false
 
 p1Button.addEventListener('click', () => {
     if (!isGameOver) {
-    p1Score += 1
-    if (p1Score === winningScore) {
-    p1Display.textContent = p1Score
-        } 
+        p1Score += 1
+        if (p1Score === winningScore) {
+            isGameOver = true
+            p1Display.classList.add('Winner')
+            p2Display.classList.add('Loser')
+        }
+        p1Display.textContent = p1Score
     }
 })
 p2Button.addEventListener('click', () => {
     if (!isGameOver) {
         p2Score += 1
         if (p2Score === winningScore) {
-        p2Display.textContent = p2Score
-            } 
+            isGameOver = true
+            p2Display.classList.add('Winner')
+            p1Display.classList.add('Loser')
         }
+        p2Display.textContent = p2Score
+    }
 })
 
 scoreSelect.addEventListener('change', () => {
-    winningScore
+    winningScore = parseInt(this.value)
+    reset()
 })
 
 resetButton.addEventListener('click', () => {
     isGameOver = false
     p1Score = 0
     p2Score = 0
-    p1Display.textContent = 0 
-    p2Display.textContent = 0 
+    p1Display.textContent = 0
+    p2Display.textContent = 0
+    p1Display.classList.remove('Winner', 'Loser')
+    p1Display.classList.remove('Winner', 'Loser')
+
 })
