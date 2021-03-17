@@ -1,0 +1,16 @@
+JavaScript is:
+
+High Level - automatizes recourses, faster process. (i.e. C vs JS)
+Multi-Paradigm - JS runs as a Linear language, an OOP language or as a Functional language.
+
+Call-Stack / Single-threading = {
+    Variables declared outside a function become global
+    Declared Functions create a execution context = {
+        What must be done to execute the function (ie. X + Y = Z)
+    }
+
+    Globals always initiate the callstack, falling at the bottom of it.
+    
+    Above them are the functions, which will be executed
+     so that the call stack can return to the first-piece of the stack (global variable)
+}
