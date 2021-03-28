@@ -17,7 +17,7 @@ const jonas = {
     // Solution 1
     // Saves this keyword from parent scope
     // const self = this; // self or that
-    // // Normal funcs do not possess their own `this` keyword
+    // // Normal funcs possess their own `this` keyword. Whatever is put in the brackets aside function declaration
     // const isMillenial = function () {
     // Utilizes parent scope`s saved `this` to use within the function
     //   console.log(self);
