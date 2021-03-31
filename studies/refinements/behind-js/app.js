@@ -5,13 +5,13 @@
 
 // Object - if This is declared within the object,
 // `this.firstName` - this will
-const jonas = {
-  firstName: "Jonas",
-  year: 1991,
-  // Inherit`s jonas as `this` keyword, since it is a method
-  calcAge: function () {
-    // console.log(this);
-    console.log(2037 - this.year);
+// const jonas = {
+//   firstName: "Jonas",
+//   year: 1991,
+//   // Inherit`s jonas as `this` keyword, since it is a method
+//   calcAge: function () {
+//     // console.log(this);
+//     console.log(2037 - this.year);
     // Translation: 2037 - jonas.year
 
     // Solution 1
@@ -27,22 +27,22 @@ const jonas = {
     // Solution 2
     // => func inherit parent`s scope as `this` keyword,
     // since they don`t have their own.
-    const isMillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-    isMillenial();
-  },
+//     const isMillenial = () => {
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
 
-  // Arrow functions don`t have a `this` keyword, they inherit them.
-  greet: () => {
-    console.log(this);
-    console.log(`Hey ${this.firstName}`);
-    // Output: `Hey Matilda` - `This` = Window
-  },
-};
-jonas.greet();
-jonas.calcAge();
+//   // Arrow functions don`t have a `this` keyword, they inherit them.
+//   greet: () => {
+//     console.log(this);
+//     console.log(`Hey ${this.firstName}`);
+//     // Output: `Hey Matilda` - `This` = Window
+//   },
+// };
+// jonas.greet();
+// jonas.calcAge();
 
 // arguments keyword
 // const addExpr = function (a, b) {

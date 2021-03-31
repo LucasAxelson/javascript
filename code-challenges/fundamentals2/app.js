@@ -1,31 +1,32 @@
 // Coding Challenge 4
 // Calculate tips with loops and calculate total`s average
-let sum = 0;
-calcAverage = (arr) => {
-  for (let i = 0; i < bills.length; i++) {
-    sum += arr[i];
-  }
-  return sum / bills.length;
-};
+// let sum = 0;
+// calcAverage = (arr) => {
+//   for (let i = 0; i < bills.length; i++) {
+//     sum += arr[i];
+//   }
+// Add the values within the array and divide them by the array`s length
+//   return sum / bills.length;
+// };
 
-calcTip = (bill) => {
-  let tip;
-  if (bill >= 50 && bill <= 300) {
-    tip = 0.15 * bill;
-  } else {
-    tip = 0.2 * bill;
-  }
-  return tip;
-};
+// calcTip = (bill) => {
+//   let tip;
+//   if (bill >= 50 && bill <= 300) {
+//     tip = 0.15 * bill;
+//   } else {
+//     tip = 0.2 * bill;
+//   }
+//   return tip;
+// };
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = calcAverage(bills);
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = calcAverage(bills);
 
-bills.forEach((bill) => {
-  let tip = calcTip(bill);
-  tips.push(tip);
-});
+// bills.forEach((bill) => {
+//   let tip = calcTip(bill);
+//   tips.push(tip);
+// });
 
 // Coding Challenge 3
 // Calculate the BMI of both people utilizing objects
