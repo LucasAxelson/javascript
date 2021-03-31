@@ -2,13 +2,14 @@
 // $20 tip, if purchase is different.
 // Test Data: £275 -- $40 -- $430
 
-function tipBill(perc, bill) {
-    let tip = (perc / 100) * bill
-    console.log(`Your bill is £${bill}, and the tip will be £${tip}`)
-}
+// function tipBill(perc, bill) {
+//     let tip = (perc / 100) * bill
+//     console.log(`Your bill is £${bill}, and the tip will be £${tip}`)
+// }
 
-let bill = 430
-bill >= 50 && bill <= 300 ? tipBill(15, bill) : tipBill(20, bill)
+// let bill = 430
+// If bill is between 50 & 300, 15%. If not, 20%.
+// bill >= 50 && bill <= 300 ? tipBill(15, bill) : tipBill(20, bill)
 
 // =================== **** =======================
 // Data 1: Dolphins: 96, 108 and 89. Koalas: 88, 91 and 110
@@ -20,10 +21,13 @@ bill >= 50 && bill <= 300 ? tipBill(15, bill) : tipBill(20, bill)
 // const reducer = (accumulator, currentValue) => accumulator + currentValue
 
 // function calculateScore(array1, array2) {
+
+// Sum all values within an array.
 //     let score1 = array1.reduce(reducer)
 //     score1 = score1 / 3
 //     console.log(score1)
 
+// Sum all values within an array.
 //     let score2 = array2.reduce(reducer)
 //     score2 = score2 / 3
 //     console.log(score2)
@@ -32,9 +36,12 @@ bill >= 50 && bill <= 300 ? tipBill(15, bill) : tipBill(20, bill)
 // }
 
 // function determineWinner(score1, score2) {
+// If Victor's score is larger than the other and over 100, victory
 //     if (score1 > score2 && score1 >= 100) return `Congratulations, Dolphins! You are the winners`;
 //     else if (score2 > score1 && score2 >= 100) return `Congratulations, Koalas! You are the winners`;
+// If both scores are equal and above 100, draw!
 //     else if (score1 == score2 && score1 > 100) return `No winners today! It's a draw!!`;
+// If non of the above criterias match, return this.
 //     else return `Neither teams have surpassed the minimum score of 100. Both teams lose.`;
 // }
 
