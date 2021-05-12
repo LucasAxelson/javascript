@@ -65,11 +65,32 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
+// Object made up of various arrays. 
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
+
+currencies.forEach(function(value, key, map) {
+// Value and Key retrieved from the two-index-arrays that compose currencies.
+  console.log(`${key}: ${value}`)
+  // Console logs object Map.
+  console.log(map)
+})
+
+//Set
+
+// All values are contained within a single array that composes the Object.
+const currenciesUnique = new Set ([`USD`, `GBP`, `USD`, `EUR`, `EUR`])
+currenciesUnique.forEach(function(value, key, map) {
+// There is no value or key, since there are no indexes. Refer to comment above.
+  console.log(`${key}: ${value}`)
+// Console logs object Set
+  console.log(map)
+})
+
+/////////////////////////////////////////////////
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
