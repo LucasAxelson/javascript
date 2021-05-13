@@ -1,0 +1,34 @@
+.example-class {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 21px;
+  color: green;
+  text-align: right;
+}
+
+.ft-title {
+  color: violet;
+  font-size: 28px;
+}
+
+.formatting {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.margin-25 {
+  margin: 25px;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+.dogs-img {
+  height: 250px;
+  display: block;
+}
+
+.clicked-me {
+  color: teal;
+  text-align: right;
+}
