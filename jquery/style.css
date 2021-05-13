@@ -1,3 +1,12 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  opacity: 0.2;
+}
+
 .example-class {
   font-family: "Courier New", Courier, monospace;
   font-size: 21px;
@@ -31,4 +40,15 @@
 .clicked-me {
   color: teal;
   text-align: right;
+}
+
+.jq-btns {
+  padding: 10px;
+
+  background-color: gray;
+  color: white;
+  font-size: 1rem;
+
+  cursor: pointer;
+  border: 2px solid black;
 }
