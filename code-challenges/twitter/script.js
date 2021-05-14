@@ -13,6 +13,7 @@ function addTweet (input) {
 
 function renderAlert(charCount) {
     const alert = document.createElement(`p`)
+    alert.classList.add(`container__alert`)
     const containerAlert = document.createElement(`div`)
     containerAlert.classList.add(`container--alert`)
 
@@ -29,8 +30,9 @@ function removeAlert() {
     }
 }
 
-function correctAlert() {
-    
+function correctAlert(charCount) {
+    const alert = document.querySelector(`.container__alert`)
+    alert.innerText = `You have used too many characters (${charCount}). The limit is 280 characters.` 
 }
 
 
@@ -46,7 +48,7 @@ form.addEventListener(`submit`, (e) => {
     if (charCount > 10 && !document.querySelector(`.container--alert`)) {
         renderAlert(charCount)
     } else if (charCount > 10 && document.querySelector(`.container--alert`)) {
-        renderAlert(charCount)
+        correctAlert(charCount)
     } else {
         removeAlert()
     }
