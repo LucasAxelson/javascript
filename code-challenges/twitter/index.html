@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String Char Count</title>
-    <script defer src="/code-challenges/twitter/script.js"></script>
+    <title>Twitter</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="/">
-        <input class="input--tweet" type="text">
-        <button class="button--tweet" type="submit">Submit</button>
-    </form>
-    <div class="container--tweets"></div>
+
+    <header>
+        <h2 class="title">Insert Tweet</h2>
+
+        <form action="/">
+            <input 
+                class="input--tweet" 
+                maxlength="250" 
+                value="I love cookies..." 
+                type="text"
+            >
+            <button class="button--tweet" type="submit">Submit</button>
+        </form>
+    </header>
+
+    <section class="container--tweets">
+
+        <div class="container--tweet">
+            <p class="paragraph--tweet">
+                Dad
+           </p>
+        </div>
+
+    </section>
 </body>
 </html>

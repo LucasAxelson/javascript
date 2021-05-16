@@ -1,0 +1,43 @@
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 35px;
+}
+
+/* TWEET INPUT */
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.input--tweet {
+  padding: 0.25rem 0.25rem;
+  width: 40%;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+}
+
+/* TWEET */
+.container--tweets {
+  margin-top: 25px;
+}
+
+.container--tweet {
+  background-color: rgb(216, 227, 236);
+  border: 2px solid black;
+  padding: 5px 15px;
+  margin: 15px 0;
+  width: 50%;
+}
+
+.paragraph--tweet {
+  font-size: 20px;
+}

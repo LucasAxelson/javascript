@@ -5,19 +5,29 @@ const btnTweet = document.querySelector(`.button--tweet`)
 const containerTweets = document.querySelector(`.container--tweets`)
 
 // FUNCTIONS
-function addTweet (input) {
+function addTweet (tweet) {
+    const tweetDiv = document.createElement(`div`)
+    tweetDiv.classList.add(`container--tweet`)
     const paragraph = document.createElement(`p`)
-    paragraph.innerText = input.value
-    containerTweets.append(paragraph)
+    paragraph.classList.add(`paragraph--tweet`)
+    paragraph.innerText = modifyTweet(tweet)
+    tweetDiv.append(paragraph)
+    containerTweets.append(tweetDiv)
+    inputTweet.value = ""    
 }
 
-function renderAlert(charCount) {
+function modifyTweet (rawTweet) {
+    const newTweet = rawTweet[0].toUpperCase() + rawTweet.slice(1) 
+    return newTweet
+}
+
+function renderAlert(charCount, charLimit) {
     const alert = document.createElement(`p`)
     alert.classList.add(`container__alert`)
     const containerAlert = document.createElement(`div`)
     containerAlert.classList.add(`container--alert`)
 
-    alert.innerText = `You have used too many characters (${charCount}). The limit is 280 characters.`
+    alert.innerText = `You have used too many characters (${charCount}). The limit is ${charLimit} characters.`
     containerAlert.append(alert)
 
     form.insertAdjacentElement(`beforebegin`, containerAlert)
@@ -30,27 +40,28 @@ function removeAlert() {
     }
 }
 
-function correctAlert(charCount) {
+function correctAlert(charCount, charLimit) {
     const alert = document.querySelector(`.container__alert`)
-    alert.innerText = `You have used too many characters (${charCount}). The limit is 280 characters.` 
+    alert.innerText = `You have used too many characters (${charCount}). The limit is ${charLimit} characters.` 
 }
-
 
 // APP
 form.addEventListener(`submit`, (e) => {
+
     e.preventDefault()
     const charCount = inputTweet.value.length
-
-    if (charCount <= 10) {
-        addTweet(inputTweet)
+    const charLimit = 180 
+    const rawTweet = inputTweet.value 
+    
+    if (charCount <= charLimit) {
+        addTweet(rawTweet)
     }
 
-    if (charCount > 10 && !document.querySelector(`.container--alert`)) {
-        renderAlert(charCount)
-    } else if (charCount > 10 && document.querySelector(`.container--alert`)) {
-        correctAlert(charCount)
+    if (charCount > charLimit && !document.querySelector(`.container--alert`)) {
+        renderAlert(charCount, charLimit)
+    } else if (charCount > charLimit && document.querySelector(`.container--alert`)) {
+        correctAlert(charCount, charLimit)
     } else {
         removeAlert()
     }
 })
-
