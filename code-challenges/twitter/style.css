@@ -10,19 +10,46 @@ body {
   margin: 35px;
 }
 
-/* TWEET INPUT */
+.title--text {
+  background-color: rgb(240, 241, 243);
+  border: 2px solid black;
+  border-radius: 5px;
+
+  font-size: 21px;
+}
+
+/* HEADER */
 
 h2 {
   margin-bottom: 2rem;
 }
 
+form {
+  display: flex;
+  align-items: center;
+}
+
 .input--tweet {
-  padding: 0.25rem 0.25rem;
-  width: 40%;
-  overflow: hidden;
-  resize: both;
-  min-height: 40px;
+  padding: 0.5rem 0.5rem;
+  margin: 0 0.25rem;
+  width: 44%;
   line-height: 20px;
+}
+
+.button--tweet {
+  padding: 0.25rem 1rem;
+  height: 45px;
+}
+
+.button--tweet:hover {
+  background-color: rgb(171, 193, 236);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button--tweet:active {
+  background-color: rgb(103, 145, 230);
+  transition: 0.1s ease-in-out;
 }
 
 /* TWEET */
@@ -33,6 +60,7 @@ h2 {
 .container--tweet {
   background-color: rgb(216, 227, 236);
   border: 2px solid black;
+  border-radius: 5px;
   padding: 5px 15px;
   margin: 15px 0;
   width: 50%;
