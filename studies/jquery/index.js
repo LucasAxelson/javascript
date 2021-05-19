@@ -1,3 +1,8 @@
+const anchor = $(`p.test-anchor`)
+anchor.on("click", () => {
+    anchor.css("color", "red")
+})
+
 // Manipulating styles
 $("h1").css("color","red")
 $("h2.sd-title").css("color","blue")
