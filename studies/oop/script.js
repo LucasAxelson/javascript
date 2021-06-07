@@ -35,9 +35,14 @@ Person.prototype.species = `Homo Sapiens`
 // console.log(lucas.hasOwnProperty(`species`))
 
 
-// console.log(Person.__proto__) // Native code. No output
-console.log(lucas.__proto__) // Proto methods for Person`s iterations, like jay and lucas.
-// console.log(lucas.__proto__.__proto__) // Top of proto chain. Methods for prototypes.
+// console.log(lucas.__proto__) // Proto methods for Person`s iterations, like jay and lucas.
+// console.log(lucas.__proto__.__proto__) // Top of proto chain. Prototype`s prototype.
 // console.log(lucas.__proto__.__proto__.__proto__) // returns null
 
-console.dir(Person)
+console.dir(Person.prototype.constructor)
+console.dir(Person.prototype.constructor.__proto__)
+
+Array.prototype.test = () => console.log(`Test successful`)
+
+const h1 = document.querySelector(`.test-h1`)
+console.dir(h1) // Read my prototype, then it`s prototype and so on until you hit null.

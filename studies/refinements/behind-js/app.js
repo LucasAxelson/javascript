@@ -1,3 +1,16 @@
+// OBJECT DATA INHERITANCE
+
+// Primitives = strings, numbers, symbols etc.
+// Objects = arrays, classes, functions etc.
+
+// Primitives can be altered in descending order.
+// Objects can't be as easily altered
+
+const firstName = `lucas`
+let firstOldName = name
+name = `james`
+
+console.log(firstName. firstOldName)
 // Scope & This keyword
 
 // Global scope variable, lists under class Window.
